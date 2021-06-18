@@ -1,9 +1,27 @@
-------------------
 * 오늘 일정
 - Selenium 설치
--
--
+- Selenium 함수 기초
+- 실습 및 팀별 프로젝트 기획
 -----------------------------------
-|<<Jupyter Notebook 단축키>>.       |
-|참조 : https://95pbj.tistory.com/12|
+|<<Jupyter Notebook 단축키>>.       
+|참조 : https://95pbj.tistory.com/12
 -----------------------------------
+
+## Selenium 함수
+*(fidn_elements에는 없음)
+* find_element_by_id : id값을 이용하여 접근
+find_element_by_name : 속성 name를 이용하여 접근
+find_element_by_xpath : xpath를 이용하여 접근
+find_element_by_link_text : a태그의 href를 이용하여 수집(쿼리 스트링 부분)
+find_element_by_partial_link_text : a태그의 href를 이용하여 수집(path를 이용)
+find_element_by_tag_name : 태그이름을 이용하여 접근
+find_element_by_class_name : 클래스 이름을 이용하여 접근
+find_element_by_css_selector : css selector를 이용하여 접근
+
+--> find_element_by_와 find_elements_by_의 차이 : 하나를 가져오는지, 여러개를 가져오는지의 차이
+
+## MAC에서 webdriver import하기 --> 경로복사는 command+option+C
+from selenium import webdriver
+driver = webdriver.Chrome('/Users/kime/Desktop/chromedriver')
+url = 'https://     ' #주소 붙여넣기
+driver.get(url)
