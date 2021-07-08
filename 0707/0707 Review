@@ -1,0 +1,67 @@
+0707 Review
+
+## 데이터 연결
+* concat
+	- 행으로 연결 : axis=0
+	- 열로 연결 : axis=1
+* 두개의 데이터 셋을 연결할 때, 공통된 열만 가져올 때
+	- join = "inner"
+
+## 데이터 확인
+* [].value_counts()
+* 유일한 값들만 확인하기 : unique()
+* 값 정렬하기 
+	- [].sort_values(by='열 이름', ascending=False)
+* 값 변경하기
+	- [].replace( [__.__], "rare")
+* 라벨 인코딩
+	- 문자를 숫자로 변환
+	- 모델링시 컴퓨터가 인식이 가능하도록
+* 결측치 처리
+	- [].fillna()
+	* 수치형 결측치 처리 - 평균값
+		* 평균의 단점 : 특이값/이상치가 왜곡을 일으킬 수 있다. -- 중앙값
+			* 이상치 처리 : 없애거나, 설명 가능한 값으로 변경
+	* 범주형 결측치 처리 - 최빈값
+* 데이터 형변환 함수
+	- [].astype()
+	- astype(str)
+	- astype(int)
+
+## 어떤 데이터를 그룹으로 묶어서 통계(std(), var()...)
+* [].groupby()
+* a = [].groupby([])
+
+## 원하는 컬럼 삭제
+* [].drop([ __.__ ], axis=1)
+
+## 통계기본
+* 상관관계
+	- 사용되는 그래프 : 산점도(scatter, plot)
+	- seaborn 
+		- sns.lmplot()#회귀직선
+		- sns.pairplot() #상관관계도
+* 상관관계 값의 범위
+	* -1~1 : 
+		- 절대값이 1에 가까울수록 강한 상관관계
+		- 절대값이 0에 가까울수록 상관관계가 없다. 독립적이다.
+
+## matplotlib
+* 제목 달아줄 때
+	- sns.boxplot()
+	- plt.title()
+	- x축 레이블 : plt.xlabel
+	- y축 레이블 ; plt.ylabel
+* 멀티 그래프
+	- plt.subplot(행, 열, 1)
+* 범례 달아주기
+	- plt.plot(-----, label="")
+	- plt.legend()
+
+### pandas : 데이터 처리
+### matplotlib, seaborn, plotly, folium : 시각화
+### 수학함수, 통계, 임의의 난수 발생 : numpy
+### numpy as np
+* np.array[] : numpy 배열
+
+
