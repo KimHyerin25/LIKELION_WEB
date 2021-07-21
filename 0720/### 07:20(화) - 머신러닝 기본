@@ -24,12 +24,23 @@ https://ldjwj.github.io/ML_Basic_Class/part03_ml/ch02_04_04_Bike_B_02_v10.html
 앙상블의 대표적인 모델 두개
 1(RandomForest)
 RandomForestClassifier(분류) : gini, entropy
-RandomForestRegressor(회귀)
+RandomForestRegressor(회귀) : mae, mse, rmse ...
 부트스트랩샘플링(중복허용한 샘플을 추출한다.), feature를 정해진 수 만큼 추출한다.
 
 2(Gradient Boosting)
 GradientBoostingClassifier, GradientBoostingRegressor
+매개변수 설정에 민감하다.
+learning_rate, max_depth, colsample_bytree(나무마다 사용하는 feature 퍼센트)
+
 
 공통점 : 여러개의 모델을 사용한다/ 모델 개수를 지정할 수 있다. (n_estimators)
 차이점 : 랜덤포레스트는 여러개의 모델이 독립적이지만 GradientBoosting은 각각의모델이 그다음번째 모델에 영향을 끼치면서 사용하지 않은 feature까지 사용하게된다.
 
+
+2. 교차검증
+
+데이터를 5개로 나눠서 각각 조각을 test를 해서 전체 부분의 test 검증을 해볼 수 있도록
+그래서 각각의 mae, mse, rmse 결괏값들이 나오고 이것들을 전체 평균을 냄
+5조각으로 나누면 5번, 10조각으로 나누면 10번.
+
+장점 : 
