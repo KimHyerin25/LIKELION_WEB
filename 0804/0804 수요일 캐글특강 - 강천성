@@ -1,0 +1,14 @@
+0804 수요일 캐글특강 - 강천성
+
+머신러닝
+- make general function(condition)
+train data가 현업으로 가면 우리가 이미 정답을 알고있는 과거의 데이터임
+CHURN data (이탈 고객 데이터) - 우리가 세운 기준에 이탈을 했냐 안했느냐
+overfitting - 너무 train만 잘맞추고 test는 별로 못맞춤
+general : 학습할때 하지 않은 것들도 잘 맞춘걸 일반화되어있다고 말함 보통
+
+우리가 말하는 RECALL?
+우리가 원하는 값을 잘 맞추는 general function을 만든다. 라고 말할 수 있다.
+
+- Learn statistics(correlation) between feauture vs feature / feature vs target
+모델이 입력 feature를 가지고 target을 맞추는 상관관계
